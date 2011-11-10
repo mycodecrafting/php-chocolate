@@ -1,0 +1,134 @@
+- expectations:
+    - callback expectations:
+        - should throw <exception>                                                      [X]
+        - should throw <exception> with <message>                                       [X]
+        - should not throw <exception>                                                  [X]
+        - should not throw <exception> with <message>                                   [X]
+
+    - object expectations:
+        - should be instance of <class>                                                 [X]
+        - should be an instance of <class>                                              [X]
+        - should be a <class>                                                           [X]
+        - should be an <class>                                                          [X]
+        - should not be instance of <class>                                             [X]
+        - should not be an instance of <class>                                          [X]
+        - should not be a <class>                                                       [X]
+        - should not be an <class>                                                      [X]
+        - predicate expectations:
+            - should have <predicate>                                                   [ ]
+            - should have a <predicate>                                                 [ ]
+            - should have an <predicate>                                                [ ]
+            - should not have <predicate>                                               [ ]
+            - should not have a <predicate>                                             [ ]
+            - should not have an <predicate>                                            [ ]
+            - should be <predicate>                                                     [ ]
+            - should be a <predicate>                                                   [ ]
+            - should be an <predicate>                                                  [ ]
+            - should not be <predicate>                                                 [ ]
+            - should not be a <predicate>                                               [ ]
+            - should not be an <predicate>                                              [ ]
+
+    - string expectations
+        - should contain <needle>                                                       [X]
+        - should match <pattern>                                                        [X]
+        - should not contain <needle>                                                   [X]
+        - should not match <pattern>                                                    [X]
+
+    - value expectations:
+        - should be <value>                                                             [X]
+        - should be a string                                                            [X]
+        - should be a float                                                             [X]
+        - should be an array                                                            [X]
+        - should be an integer                                                          [X]
+        - should be an object                                                           [X]
+        - should be boolean                                                             [X]
+        - should be true                                                                [X]
+        - should be false                                                               [X]
+        - should be null                                                                [X]
+        - should be exactly <value>                                                     [X]
+        - should be identical to <value>                                                [X]
+        - should be greater than <value>                                                [X]
+        - should be greater than or equal to <value>                                    [X]
+        - should be less than <value>                                                   [X]
+        - should be less than or equal to <value>                                       [X]
+        - should equal <value>                                                          [X]
+        - should not be <value>                                                         [X]
+        - should not be a string                                                        [X]
+        - should not be a float                                                         [X]
+        - should not be an array                                                        [X]
+        - should not be an integer                                                      [X]
+        - should not be an object                                                       [X]
+        - should not be boolean                                                         [X]
+        - should not be true                                                            [X]
+        - should not be false                                                           [X]
+        - should not be null                                                            [X]
+        - should not be exactly <value>                                                 [X]
+        - should not be identical to <value>                                            [X]
+        - should not be greater than <value>                                            [X]
+        - should not be greater than or equal to <value>                                [X]
+        - should not be less than <value>                                               [X]
+        - should not be less than or equal to <value>                                   [X]
+        - should not equal <value>                                                      [X]
+
+
+- mocks:
+    - method call expectations                                                          [ ]
+    - method call argument expectations                                                 [ ]
+    - method call argument expectation comparisons (instance_of, a_string, etc)         [ ]
+
+		$mock->should_receive('method_name')
+			->with(
+				anything,
+				a_string,
+				a_float,
+				an_array,
+				an_integer,
+				an_object,
+				a_boolean,
+				an_instance_of('class_name'),
+				a_string_containing('needle'),
+				a_string_matching('/pattern/'),
+			)->once
+			->and_return(false);
+
+
+
+
+    - method call count expectations (exact)                                            [X]
+    - method call count expectations (at least)                                         [X]
+    - method call count expectations (at most)                                          [X]
+    - method call count expectations (any)                                              [X]
+    - method call return values (single)                                                [X]
+    - method call return values (consecutive)                                           [ ]
+    - method call return values based on passed arguments                               [X]
+    - method call throw exception expectations                                          [ ]
+    - method call ordering expectations                                                 [ ]
+    - partial mocks                                                                     [X]
+    - stubs:                                                                            [X]
+        - stub method return values (single)                                            [X]
+        - stub method return values (consecutive)                                       [ ]
+        - stub method return values based on passed arguments                           [X]
+        - partial stubs                                                                 [X]
+
+
+- better reporting:
+    - support multiple simultaneous reporters                                           [X]
+    - more outcomes than pass/fail for spec runs                                        
+        - 1. Implemented (passed)  <- no errors                                         [X]
+        - 2. Failed                <- has expectations and errors                       [X]
+        - 3. Not Implemented       <- no expectations                                   [X]
+        - 4. Skipped               <- skipped for some reason                           [X]
+    - text (for CLI, etc)                                                               [X]
+    - HTML                                                                              [X]
+    - XML                                                                               [X]
+
+
+- manually mark specs:
+    - passed                                                                            [X]
+    - skipped                                                                           [X]
+    - failed                                                                            [X]
+    - not implemented                                                                   [X]
+
+- malicious user facade
+	malicious_user::inject->_GET('field')->with_xss->in_img_tag;
+

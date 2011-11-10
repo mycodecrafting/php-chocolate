@@ -1,0 +1,3 @@
+Stubs provide canned responses to messages they might receive in a test, while
+mocks allow you to specify and, subsequently, verify that certain messages should be
+received during the execution of a test.
